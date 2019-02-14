@@ -8,7 +8,7 @@ from flask import Flask, render_template, request, Markup
 
 
 def create_app():
-    """Create flask app for binding."""
+    """Create flask  app for binding."""
     app: Flask = Flask(__name__)
 
     template_file_name = 'index.html'
