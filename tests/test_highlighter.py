@@ -11,6 +11,11 @@ from highlighter import create_app
 class HighlightTest(unittest.TestCase):
     """Test class for flask app."""
 
+    def __init__(self, methodName='runTest'):
+        super().__init__(methodName='runTest')
+        self.text = None
+        self.search_text = None
+
     def setUp(self):
         """This method is called each time the test routine run"""
         self.app = create_app().test_client()
@@ -21,6 +26,8 @@ class HighlightTest(unittest.TestCase):
         """This method is called after the test routine is finished
         to clear out the data created in setUp method."""
         # TODO: add an implementation
+        pass
+        # request.addfinalizer(tearDown)
 
     def test_markup_text(self):
         """Test markup process"""
